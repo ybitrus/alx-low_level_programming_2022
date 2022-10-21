@@ -1,34 +1,28 @@
 /**
- * times_table - a function that prints the 9 times table, starting with 0
+ * times_table - a function that prints the 9 times table
  */
 
 void times_table(void)
 {
-	int rone, cone, d;
+	int n, m, p;
 
-	for (rone = 0; rone <= 9; rone++)
+	for (n = 1; n <= 9; n++)
 	{
 		_putchar('0');
-		_putchar(',');
-		_putchar(' ');
-		for (cone = 1; cone <= 9; cone++)
-		{
-			d = (rone * cone);
-			if ((d / 10) > 0)
-			{
-				_putchar((d / 10) + '0');
-			}
-			else
-			{
-				_putchar(' ');
-			}
-			_putchar((d % 10) + '0');
 
-			if (cone < 9)
-			{
-				_putchar(',');
+		for (m = 1; m <= 9; m++)
+		{
+			_putchar(',');
+			_putchar(' ');
+
+			p = n * m;
+
+			if (p <= 9)
 				_putchar(' ');
-			}
+			else
+				_putchar((p / 10) + '0');
+
+			-putchar((P % 10) + '0');
 		}
 		_putchar('\n');
 	}
