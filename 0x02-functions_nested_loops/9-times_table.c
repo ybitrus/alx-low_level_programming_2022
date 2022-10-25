@@ -6,24 +6,31 @@ void times_table(void)
 {
 	int n, m, p;
 
-	for (n = 1; n <= 9; n++)
+	for (n = 0; n <= 9; n++)
 	{
-
+		_putchar('0');
+		_putchar(',');
+		_putchar('');
 		for (m = 1; m <= 9; m++)
-		{
-			_putchar(',');
-			_putchar(' ');
-
-			p = n * m;
-
-			if (p <= 9)
-				_putchar(' ');
-			else
+		:wq{ 
+			p = (n * m);
+			if ((p / 10) > 0)
+			{
 				_putchar((p / 10) + '0');
-
-			-putchar((p % 10) + '0');
+			}
+			else
+			{
+				_putchar('');
+			}
+			_putchar((p % 10) + '0');
+			
+			if (m < 9)
+			{
+				_putchar('');
+				_putchar('');
+			}
 		}
+
 		_putchar('\n');
 	}
-
 }
