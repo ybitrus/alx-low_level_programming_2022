@@ -9,7 +9,7 @@
  * Return: value of x raised to y
  */
 
-int int _pow_recursion(int x, int y)
+int _pow_recursion(int x, int y)
 {
 	int result = x;
 
